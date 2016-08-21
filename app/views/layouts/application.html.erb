@@ -10,5 +10,9 @@
 
   <body>
     <%= yield %>
+
+    <% if @include_map_js %>
+    	<%= javascript_include_tag 'map' %>
+    <% end %>
   </body>
 </html>

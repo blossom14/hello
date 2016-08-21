@@ -1,0 +1,22 @@
+<head>
+<style>
+.box {
+	width: 200px;
+	height: 300px;
+	overflow-y: scroll;
+}
+#chat-speak {
+	width: 200px;
+}
+
+</style>
+</head>
+<body>
+<p>Signed in as @<%= current_user.name %>.</p>
+<div class="box">
+<div id= 'messages'></div>
+</div>
+<br/><br/>
+
+<%= text_field_tag :body, '', id: 'chat-speak' %>
+</body>
