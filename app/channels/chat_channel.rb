@@ -13,6 +13,6 @@ class ChatChannel < ApplicationCable::Channel
 
   def render_message(message)
   	ApplicationController.render(partial: 'messages/message',
-  								locals: { message: message, username: current_user})
+  								locals: { message: message, username: current_user.name})
   end
 end
