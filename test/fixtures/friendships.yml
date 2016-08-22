@@ -3,7 +3,9 @@
 one:
   user_id: 1
   friend_id: 1
+  accepted: false
 
 two:
   user_id: 1
   friend_id: 1
+  accepted: false

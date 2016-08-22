@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
+  get 'friendships/create'
+
+  get 'friendships/update'
+
+  get 'friendships/destroy'
+
   devise_for :users, controllers: { registrations: 'users/registrations' }
   resources :users
   resources :maps
   resources :messages, only: [:index]
   resources :sessions, only: [:new, :create]
-  resources :friendships, only: [:create, :destroy]
+  resources :friendships, only: [:create, :update, :destroy]
   
 
   root 'welcome#index'
