@@ -17,6 +17,10 @@ class User < ApplicationRecord
 
 	# to call all your friends
 
+	def allfriendships
+		friendships.accepted | received_friendships.accepted
+	end
+
 	def friends
 	  active_friends | received_friends
 	end

@@ -7,7 +7,7 @@ class FriendshipsController < ApplicationController
   end
 
   def index
-    @friendships = current_user.friendships.accepted
+    @friendships = current_user.allfriendships
   end
 
   def create
