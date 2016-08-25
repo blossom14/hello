@@ -1,3 +1,18 @@
+<head>
+<style>
+.signup {
+  margin: 100px;
+  margin-left: 300px;
+}
+input {
+  width: 600px;
+  height: 40px;
+}
+</style>
+</head>
+
+<body>
+<div class="signup">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -27,7 +42,7 @@
 
   <div class="field">
     <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
+    <%= f.file_field :avatar %><br>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
@@ -35,3 +50,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

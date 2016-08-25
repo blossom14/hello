@@ -1,3 +1,10 @@
+<head>
+<style>
+
+</style>
+</head>
+<body>
+<div class = "box">
 <%= current_user.name %>의 친구목록
 <% @friendships.each do |friendship| %>
 	<% if friendship.user == current_user %>
@@ -7,5 +14,6 @@
 		<br><%= friendship.user.name %>
 		<%= link_to "chat with #{friendship.user.name}", messages_friendship_path(friendship.id) %>
 	<% end %>
-
 <% end %>
+</div>
+</body>

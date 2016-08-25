@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello</title>
+    <title>20m</title>
     <%= include_gon %>
     <%= csrf_meta_tags %>
+    <link rel="shortcut icon" href="/assets/20m">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,6 +15,25 @@
   nav.navbar.navbar-default {
     background-color: white;
   }
+  body {
+    background-color: #fafafa;
+    font-family: 'Nanum Gothic Coding', monospace;
+  }
+ .box {
+  background-color: white;
+  padding: 20px;
+  width:600px;
+  margin: 0 auto;
+
+}
+  .nav.navbar-nav {
+    position: absolute;
+    right: 50px;
+  }
+  .icon {
+   width:50px;
+  }
+
   </style>
   </head>
   <body>
@@ -47,5 +67,7 @@
   </div><!-- /.container-fluid -->
 </nav>
     <%= yield %>
+<div class="blank">
+</div>
   </body>
 </html>
