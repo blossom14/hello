@@ -18,8 +18,12 @@
 	margin-bottom: 200px;
 }
 
+#hihi {
+  width: 100px;
+}
+
 .carousel-inner, .item, .carousel-control{
-	height: 500px;
+	height: 450px;
 	overflow: hidden;
 }
 
@@ -39,10 +43,17 @@ footer {
 .login {
   padding-left: 350px;
 }
-
-
-
-
+.carousel-caption p {
+  font-size: 50px;
+  font-family: 'Nanum Brush Script', cursive;
+}
+.navbar-header {
+  margin-left: 100px !important;
+}
+.btn.btn-default {
+  position:relative;
+  left: 50px;
+}
 
 </style>
 </head>
@@ -58,24 +69,23 @@ footer {
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="/assets/subway" alt="...">
+      <img src="/assets/subway" alt="">
       <div class="carousel-caption">
-        ...
+        <p>20m의 작은 공간에서</p>
       </div>
     </div>
     <div class="item">
       <img src="/assets/subway2" alt="...">
       <div class="carousel-caption">
-        ...
+        <p>스쳐지나가는 수많은 인연</p>
       </div>
     </div>
     <div class="item">
       <img src="/assets/subway3" alt="...">
       <div class="carousel-caption">
-        ...
+        <p>20m에서 우리 이야기 해봐요</p> 
       </div>
     </div>
-    ...
   </div>
 
   <!-- Controls -->
@@ -90,6 +100,7 @@ footer {
 </div>
 
 <div class= "welcome">
+<center><img id="hihi" src="/assets/20m" alt="..."></center>
 	<center><h3>20m에 오신 것을 환영합니다!</h3></center>
 	<center><p>다른 사람과 친구가 되어 대화를 나눠보세요</p></center>
   <div class = login>
@@ -97,7 +108,7 @@ footer {
   <p><%=image_tag(current_user.avatar, :width=>200) %></p>
   <p> 현재 로그인한 유저 이름 :<%= current_user.name %></p>
 <% else %>
-  <center><a class="btn btn-default" href="/users/sign_in" role="button">Log In</a></center>
+  <a class="btn btn-default" href="/users/sign_in" role="button">Log In</a>
 <% end %>
 </div>
 </div>

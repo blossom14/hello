@@ -1,6 +1,6 @@
 <head>
 <style>
-.box {
+.chatbox {
 	width: 200px;
 	height: 300px;
 	overflow-y: scroll;
@@ -8,15 +8,19 @@
 #chat-speak {
 	width: 200px;
 }
-
+.chat {
+	margin: 100px;
+}
 </style>
 </head>
 <body>
+<div class="chat">
 <p>Signed in as @<%= current_user.name %>.</p>
-<div class="box">
+<div class="chatbox">
 <div id= 'messages'></div>
 </div>
 <br/><br/>
 
 <%= text_field_tag :body, '', id: 'chat-speak' %>
+</div>
 </body>

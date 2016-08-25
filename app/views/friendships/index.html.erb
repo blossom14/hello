@@ -1,10 +1,14 @@
 <head>
 <style>
-
+#friend {
+	width: 600px;
+}
 </style>
 </head>
 <body>
+<center><img id="friend" src="/assets/friend" alt="..."></center>
 <div class = "box">
+
 <%= current_user.name %>의 친구목록
 <% @friendships.each do |friendship| %>
 	<% if friendship.user == current_user %>

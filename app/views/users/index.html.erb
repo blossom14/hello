@@ -1,7 +1,14 @@
+<head>
+<style>
+#connection {
+  width: 600px;
+}
+</style>
+</head>
 <body>
+<center><img id="connection" src="/assets/connection" alt="..."></center>
 <div class= "box">
-# Here is a way to add an add friend link to a list of users.
-# I'd recommend adding an unless or if statement to filter current_user and already requested friends.
+<h4><%=current_user.name%>님 근처의 사람들입니다</h4>
 <ul>
     <% @users.each do |user| %>
         <li>
@@ -12,9 +19,9 @@
             <% end %>
         </li>
     <% end %>
-</ul>
+</ul><br><br>
 
-# Here is a list of your pending requests
+<h4><%=current_user.name%>님에 대한 친구요청입니다</h4>
 
 <ul>
     <% current_user.received_friendships.pending.each do |request| %>
