@@ -1,12 +1,46 @@
-<h1>내 주변의 소중한 사람들을 만나보세여</h1>
+<head>
+<style>
+body {
+	background-color: #EEE7E7;
+}
+
+.welcome, .box {
+	background-color: white;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.welcome {
+	padding:10px;
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+
+.box {
+	padding: 20px;
+}
+
+</style>
+</head>
+<body>
+<div class= "welcome">
+	<h3>20m에 오신 것을 환영합니다!</h3>
+	<p>다른 사람과 친구가 되어 대화를 나눠보세요</p>
+</div>
+
+<div class = "box">
+<h3>내 주변의 소중한 사람들을 만나보세요</h3>
 <% if user_signed_in? %>
-	<p><%=image_tag(current_user.avatar, :width=>200) %>
+	<p><%=image_tag(current_user.avatar, :width=>200) %></p>
 	<p> 현재 로그인한 유저 이름 :<%= current_user.name %></p>
 	<p><%=link_to "로그아웃", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"} %></p>
 <% else %>
 	<p><%=link_to "로그인", new_user_session_path %></p>
 <% end %>
 
+
  <%= form_for :session, url: sessions_path do |f| %>
  	<%= f.submit 'Start chatting' %>
  <% end %>
+ </div>
+ </body>
